@@ -1,18 +1,19 @@
 // scripts.js
 
-var i, j;
-var row = prompt('Podaj wysokość choinki w wierszach');
-
-function drawTree (row){
-	for (i=1; i<row; i++)
-{
-    for (j=1; j<row; j++)
-    {
-    console.log("*");
+function drawTree(rows) {
+  for (var i = 1; i <= rows; i++) {
+    var star = '';
+    
+    for (var space = 0; space < rows - i; space++) {
+      star += ' ';
     }
+    
+    for (var j = 0; j < i * 2 - 1; j++) {
+       star += '*';
+    }
+    
+    console.log(star);
+  }
 }
-console.log("<br>");
-	for (i=row-1, i>=0, i=--){
 
-	}
-}
+drawTree(6);
